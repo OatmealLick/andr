@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.EditText;
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String MESSAGE = "message";
 
-    private String currentLanguage = "en";
+    private static String currentLanguage = "en_US";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,24 +40,21 @@ public class MainActivity extends AppCompatActivity {
     public void changeLanguage(final View view) {
 
         Locale locale;
-        if (currentLanguage.equals("en")) {
+        if (currentLanguage.equals("en_US")) {
             locale = new Locale("pl");
+            currentLanguage = "pl";
         } else {
-            locale = new Locale("en");
+            locale = new Locale("en_US");
+            currentLanguage = "en_US";
         }
 
-        Locale.setDefault(locale);
-        Context context = this;
-        Resources res = this.getResources();
-        Configuration config = new Configuration(res.getConfiguration());
-        if (Build.VERSION.SDK_INT >= 17) {
-            config.setLocale(locale);
-            context = context.createConfigurationContext(config);
-        } else {
-            config.locale = locale;
-            res.updateConfiguration(config, res.getDisplayMetrics());
-        }
-
-        this.attachBaseContext(context);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = locale;
+        res.updateConfiguration(conf, dm);
+        Intent refresh = new Intent(this, MainActivity.class);
+        startActivity(refresh);
+        finish();
     }
 }

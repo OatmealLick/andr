@@ -7,9 +7,10 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_margin="@dimen/default_activity_margin"
         android:layout_height="162dp"
+        android:layout_margin="@dimen/default_activity_margin"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="151dp">
@@ -35,14 +36,33 @@
             android:layout_height="wrap_content"
             android:onClick="sendMessage"
             android:text="@string/send_message_button" />
+
+
     </LinearLayout>
 
     <Button
         android:id="@+id/button2"
-        android:layout_margin="@dimen/default_activity_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_activity_margin"
         android:onClick="changeLanguage"
-        android:text="@string/change_language_button"/>
+        android:text="@string/change_language_button" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.848"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animationmorphing" />
 
 </android.support.constraint.ConstraintLayout>
