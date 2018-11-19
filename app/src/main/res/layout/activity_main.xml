@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/default_activity_margin"
+        android:layout_height="162dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="151dp">
+
+        <TextView
+            android:id="@+id/messageTV"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/message_title"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_editor_absoluteY="194dp" />
+
+        <EditText
+            android:id="@+id/messageET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sendMessage"
+            android:text="@string/send_message_button" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_margin="@dimen/default_activity_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="changeLanguage"
+        android:text="@string/change_language_button"/>
+
+</android.support.constraint.ConstraintLayout>

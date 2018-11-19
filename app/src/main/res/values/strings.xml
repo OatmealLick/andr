@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SampleApplication</string>
+    <string name="title_activity_show_message">ShowMessageActivity</string>
+    <string name="message_title">Message</string>
+    <string name="send_message_button">SEND MESSAGE</string>
+    <string name="change_language_button">CHANGE LANGUAGE</string>
+</resources>

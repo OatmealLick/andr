@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Przykładowa apka</string>
+    <string name="title_activity_show_message">Pokaż wiadomość</string>
+    <string name="message_title">Wiadomość</string>
+    <string name="send_message_button">WYŚLIJ WIADOMOŚC</string>
+    <string name="change_language_button">ZMIEN JĘZYK</string>
+</resources>
